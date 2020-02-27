@@ -56,3 +56,10 @@ or
 /work # php artisan -V
 Laravel Framework 6.6.1
 ```
+
+## Supplements
+### Connect to MySQL
+
+```
+$ docker-compose exec db bash -c 'mysql -uroot -p${MYSQL_PASSWORD} ${MYSQL_DATABASE}'
+```
