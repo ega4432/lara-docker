@@ -49,5 +49,11 @@ services:
       - 6379:6379
     volumes:
       - ./docker/redis/data:/redis/data
+  node:
+    image: node:13.10-alpine
+    tty: true
+    volumes:
+      - ./src:/work
+    working_dir: /work
 volumes:
   db-store:
