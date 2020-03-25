@@ -34,7 +34,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - db-store:/var/lib/mysql
+      - ./docker/mysql/data:/var/lib/mysql
       - ./logs:/var/log/mysql
       - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
     environment:
