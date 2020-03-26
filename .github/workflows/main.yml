@@ -17,7 +17,7 @@ jobs:
       run: echo This event is a pull request that had an assignee removed.
 
     - name: ffsdfa
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
       env:
         TZ: Asia/Tokyo
       run: docker build ./docker/php/ --no-cache --tag yossiee:php --build-args TZ=$TZ
