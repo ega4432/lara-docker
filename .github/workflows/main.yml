@@ -15,8 +15,13 @@ jobs:
     name: Build the Docker image
     runs-on: ubuntu-latest
     steps:
-    - name: Buidl php image
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Build PHP image
       env:
         TZ: Asia/Tokyo
-      run: docker build --no-cache --tag ${{ github.repository }}:${{ github.ref }} --build-arg TZ=$TZ ./docker/php
+      run: docker build -t ${{ github.repository }}:${{ github.run_id }} --build-arg TZ=$TZ .
+      working-directory: ./docker/php
+
   # second: docker push
