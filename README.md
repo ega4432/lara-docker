@@ -1,7 +1,8 @@
 # lara-docker
 
-## Overview
+![Docker Image CI](https://github.com/yossiee/lara-docker/workflows/Docker%20Image%20CI/badge.svg)
 
+## Overview
 This is a repository for building Laravel environment with docker (docker-compose).
 The software used and its versions are as follows.
 
