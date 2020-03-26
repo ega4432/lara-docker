@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - 'feature/**'
+
+jobs:
+  # first: docker build job
+  build:
+    name: Build the Docker image
+    runs_on: ubuntu-latest
+    steps:
+    - name: Unassigned pull pull_request
+      if: github.event.name == 'pull request' && github.event.action == 'unassigned'
+      run: echo This event is a pull request that had an assignee removed.
+
+    - name: ffsdfa
+    - uses: actions/checkout@v2
+      env:
+        TZ: Asia/Tokyo
+      run: docker build ./docker/php/ --no-cache --tag yossiee:php --build-args TZ=$TZ
+  # second: docker
