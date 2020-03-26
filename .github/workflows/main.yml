@@ -15,12 +15,8 @@ jobs:
     name: Build the Docker image
     runs-on: ubuntu-latest
     steps:
-    - name: Unassigned pull pull_request
-      if: github.event.name == 'pull request' && github.event.action == 'unassigned'
-      run: echo This event is a pull request that had an assignee removed.
-
     - name: Buidl php image
       env:
         TZ: Asia/Tokyo
-      run: docker build ./docker/php/ --no-cache --tag yossiee:php --build-arg TZ=$TZ
-  # second: docker
+      run: docker build --no-cache --tag ${{ github.repository }}:${{ github.ref }} --build-arg TZ=$TZ ./docker/php
+  # second: docker push
