@@ -13,15 +13,14 @@ jobs:
   # first: docker build job
   build:
     name: Build the Docker image
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Unassigned pull pull_request
       if: github.event.name == 'pull request' && github.event.action == 'unassigned'
       run: echo This event is a pull request that had an assignee removed.
 
-    - name: ffsdfa
-      uses: actions/checkout@v2
+    - name: Buidl php image
       env:
         TZ: Asia/Tokyo
-      run: docker build ./docker/php/ --no-cache --tag yossiee:php --build-args TZ=$TZ
+      run: docker build ./docker/php/ --no-cache --tag yossiee:php --build-arg TZ=$TZ
   # second: docker
