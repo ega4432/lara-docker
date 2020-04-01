@@ -6,7 +6,7 @@
 This is a repository for building Laravel environment with docker (docker-compose).
 The base container image of the software used and its version are as follows.
 
-| Software | base container image |
+| Software | base docker image |
 | :---: | :---: |
 | php | [7.3-fpm-alpine](https://hub.docker.com/_/php) |
 | mysql | [8.0](https://hub.docker.com/_/mysql) |
