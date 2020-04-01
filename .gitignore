@@ -2,3 +2,4 @@ logs/
 docker/mysql/data
 docker/redis/data/
 reset_and_push.sh
+.env
