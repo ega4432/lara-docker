@@ -4,15 +4,17 @@
 
 ## Overview
 This is a repository for building Laravel environment with docker (docker-compose).
-The software used and its versions are as follows.
+The base container image of the software used and its version are as follows.
 
-- PHP 7.3
-- MySQL 8.0
-- Nginx 1.17
-- Laravel 6.0
+| Software | base container image |
+| :---: | :---: |
+| php | [7.3-fpm-alpine](https://hub.docker.com/_/php) |
+| mysql | [8.0](https://hub.docker.com/_/mysql) |
+| nginx | [1.17-alpine](https://hub.docker.com/_/nginx) |
+| redis | [5.0-alpine](https://hub.docker.com/_/redis) |
+| node | [13.10-alpine](https://hub.docker.com/_/node) |
 
 ## Setup
-
 ### Requirements
 
 ```
